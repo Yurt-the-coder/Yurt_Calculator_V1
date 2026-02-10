@@ -15,28 +15,34 @@ def add (a, b):
     sum = a + b
     print (sum)
 
-
 #Subtraction
 def sub (a, b):
     difference = a - b
     print (difference)
-
 
 #Multiplication
 def mult (a, b):
     product = a * b
     print (product)
 
-
 #Division
 def div (a, b):
     quotient = a / b
     print (quotient)
 
-
 #Exponents
 def exponent (a, b):
     result = a ** b
+    print (result)
+
+#Modulo
+def mod (a,b):
+    result = a % b
+    print (result)
+
+#Floor Division
+def floor_div (a,b):
+    result = a // b
     print (result)
 
 #Long Division (Floor Division and Modulo)
@@ -73,52 +79,55 @@ while quit_statement != "quit":
 #else is to let the user know they put a mis-input
     try:
         
-        if function_selector == "+":
+        if function_selector == "+": #addition function selector
             a = float(input("input first number: "))
             b = float(input("input second number: "))
-            addition (a, b)
+            add (a, b)
 
-        elif function_selector == "-":
+        elif function_selector == "-": #subtraction function selector
             a = float(input("input first number: "))
             b = float(input("input second number: "))
-            print("subtraction")
+            sub (a, b)
 
-        elif function_selector == "*":
+        elif function_selector == "*": #multiplication function selector
             a = float(input("input first number: "))
             b = float(input("input second number: "))
-            print("multiplication")
+            mult (a, b)
 
-        elif function_selector == "/":
+        elif function_selector == "/": #regular division function selector
             a = float(input("input first number: "))
             b = float(input("input second number: "))
-            print("division")
+            div (a, b)
 
-        elif function_selector == "**":
+        elif function_selector == "**": #exponent function selector
             a = float(input("input first number: "))
             b = float(input("input second number: "))
-            print("exponent")
+            exponent (a, b)
 
-        elif function_selector == "//":
+        elif function_selector == "//": #floor division function selector
             a = float(input("input first number: "))
             b = float(input("input second number: "))
-            print("floor division")
+            floor_div (a,b)
 
-        elif function_selector == "%":
+        elif function_selector == "%": #modulo function selector
             a = float(input("input first number: "))
             b = float(input("input second number: "))
-            print("mod")
+            mod (a,b)
 
-        elif function_selector == "//%":
+        elif function_selector == "//%": #long division function selector
             a = float(input("input first number: "))
             b = float(input("input second number: "))
-            print("long_division")
+            long_division (a, b)
             
-        else:
+        else: #activates when the user does not use one of the specififed inputs
             print("please input a specified input to select function")
             continue #returns to the top of the loop
     
     except ValueError: #handles if the user does not input a number for 'a' or 'b'
         print ("please input a number")
         continue
+    
+    except ZeroDivisionError: #handles if user attemots to divide by zero
+        print("Cannot divide by Zero")
 
     quit_statement = input("to end, input quit; else put continue: ")
