@@ -1,12 +1,7 @@
 """
 Author: Will Yurt
 Class: Engineering & Problemsolving
-Project: multi-function calculator
-Criteria
-    1)
-    2)
-    3)
-
+Project: basic multi-function calculator
 """
 #Functions----------------------------------------------------------------------------------
 
