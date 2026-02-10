@@ -57,7 +57,7 @@ def long_division (a, b):
 #Main Loop
 quit_statement = ""
 
-print ("Welcome to Will's Calculator")
+print ("Welcome to Will's Calculator 1.0")
 while quit_statement != "quit":
 
     #input table to tell user how select functions
@@ -126,7 +126,7 @@ while quit_statement != "quit":
     except ValueError: #handles if the user does not input a number for 'a' or 'b'
         print ("please input a number")
         continue
-    
+
     except ZeroDivisionError: #handles if user attemots to divide by zero
         print("Cannot divide by Zero")
 
