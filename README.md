@@ -25,5 +25,5 @@ Selected Criteria:
             - Variable "b" is the second number in all of the functions
                 - Ex) the divisor and subtrahend
         (b) ZeroDivisionError
-            - Handles when the user attempts to divide by zero when the functions that involve division are called.
+            - Handles when the user attempts to divide by zero (0) when the functions that involve division are called.
             - Only activates if the variable "b" = 0 and the one of the division functions is called.
