@@ -10,6 +10,7 @@ Purpose: To do basic arithmetic. Can add, subtract, multiply, divide, evaluate e
 Has 
 
 Selected Criteria
+
     (1) Master "while" loop for your code that accepts and uses user input.
         (a) Begins a while loop that runs on the condition where it checks if quit_statement != "quit"
     (2) Create your own functions (at least 2) and call every function that you made
