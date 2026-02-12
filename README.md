@@ -15,8 +15,8 @@ Selected Criteria:
         (a) Begins a while loop that runs on the condition where it checks if quit_statement != "quit"
     (2) Create your own functions (at least 2) and call every function that you made
         (a) Code has seven (7) different functions
-        (b) 
-        (c) function calling is ran off of user input.
+        (b) Each function runs a different operation.
+        (c) Function calling is ran off of user input.
     (3) Use error/exception handling and handles at least two types of error.
         (a) InputValueError
             - Concerns variable "a" and variable "b"
