@@ -123,7 +123,6 @@ while quit_statement != "quit":
             a = float(input("input first number: "))
             b = float(input("input second number: "))
             answer = long_division (a, b) #returns as a tuple
-            #print("\n", answer, "\n")
             print(answer[0], ", Remainder = ", answer[1])
 
         else: #activates when the user does not use one of the specififed inputs
