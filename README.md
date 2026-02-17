@@ -7,7 +7,8 @@ Project: Basic Multi-Function Calculator
 
 Purpose: To do basic arithmetic. Can add, subtract, multiply, divide, evaluate exponents, modulo, and floor division.
 
-Has 7 different defined functions. Each one begins with asking for input for the variables "a" and "b". Runs the operation, saving the result in the variable "result", and prints the value of the variable "result"
+Has 7 different defined functions. In the master loop , user selects a function via the if, elif, else satements, then is prompted to input their first (1st) and second (2nd) numbers for variables "a", "b" respectively. 
+Uses variables "a", "b" as arguments. Runs the operation, saving the result in the variable "result", and prints the value of the variable "result"
 
 Selected Criteria:
 
