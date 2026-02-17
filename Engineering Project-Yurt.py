@@ -122,7 +122,7 @@ while quit_statement != "quit":
         elif function_selector == "//%": #long division function selector
             a = float(input("input first number: "))
             b = float(input("input second number: "))
-            answer = long_division (a, b)
+            answer = long_division (a, b) #returns as a tuple
             #print("\n", answer, "\n")
             print(answer[0], ", Remainder = ", answer[1])
 
