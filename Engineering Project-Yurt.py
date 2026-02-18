@@ -3,7 +3,7 @@ Author: Will Yurt
 Class: Engineering & Problemsolving
 Project: Basic multi-function calculator
 
-For more detail, see READ_ME
+For more detail: see READ_ME
 """
 
 #--------Functions----------------------------------------------------------------------------------
@@ -15,7 +15,7 @@ def add (a, b):
 
 #Subtraction
 def sub (a, b):
-    difference = a - b
+    difference = float(a - b)
     return difference
 
 #Multiplication
@@ -35,13 +35,13 @@ def exponent (a, b):
 
 #Modulo
 def mod (a,b):
-    result = a % b
-    return result
+    mod_result = a % b
+    return mod_result
 
 #Floor Division
 def floor_div (a,b):
-    result = a // b
-    return result
+    flr_result = a // b
+    return flr_result
 
 #Long Division function
 def long_division (a,b):
@@ -53,7 +53,7 @@ def long_division (a,b):
 
 quit_statement = ""
 
-print ("Welcome to Will's Calculator 1.0 \n ")
+print ("Welcome to Will's Calculator 1.0")
 
 while quit_statement != "quit":
 
@@ -81,45 +81,51 @@ while quit_statement != "quit":
             a = float(input("input first number: "))
             b = float(input("input second number: "))
             sum = add (a, b)
-            print(sum)
+            print('\n', sum, '\n')
 
         elif function_selector == "-": #subtraction function selector
             a = float(input("input first number: "))
             b = float(input("input second number: "))
             difference = sub (a, b)
+            print('\n', difference, '\n')
 
         elif function_selector == "*": #multiplication function selector
             a = float(input("input first number: "))
             b = float(input("input second number: "))
             product = mult (a, b)
+            print('\n', product, '\n')
 
         elif function_selector == "/": #regular division function selector
             a = float(input("input first number: "))
             b = float(input("input second number: "))
             quotient = div (a, b)
+            print('\n', quotient, '\n')
 
         elif function_selector == "**": #exponent function selector
             a = float(input("input first number: "))
             b = float(input("input second number: "))
-            result = exponent (a, b)
+            exp_result = exponent (a, b)
+            print('\n',exp_result, '\n')
             
         elif function_selector == "//": #floor division function selector
             a = float(input("input first number: "))
             b = float(input("input second number: "))
-            result = floor_div (a,b)
+            flr_div_result = floor_div (a,b)
+            print('\n', flr_div_result, '\n')
             
         elif function_selector == "%": #modulo function selector
             a = float(input("input first number: "))
             b = float(input("input second number: "))
-            result = mod (a,b)
+            mod_result = mod (a,b)
+            print('\n', mod_result, '\n')
 
         elif function_selector == "//%": #long division function selector
             a = float(input("input first number: "))
             b = float(input("input second number: "))
             long_div_answer = long_division (a, b) #returns as a tuple
-            print(long_div_answer[0], ", Remainder = ", long_div_answer[1])
-                #Index [0] in the tuple will be flr_quotient
-                #Index [1] in the tuple will be mod_result
+            print('\n', int(long_div_answer[0]), ", Remainder = ", int(long_div_answer[1]), '\n')
+                #Index [0] in the tuple will be flr_quotient of the long_division function
+                #Index [1] in the tuple will be mod_result of the long_division function
 
         else: #activates when the user does not use one of the specififed inputs
             print("please input a specified input to select function")
@@ -134,7 +140,8 @@ while quit_statement != "quit":
         continue
 
     quit_statement = input("to end, input quit; else put continue: ")
-    print ()
+    quit_statement = quit_statement.lower()
+    print("")
     
     if quit_statement == "quit":
         print ("Goodbye \n")
