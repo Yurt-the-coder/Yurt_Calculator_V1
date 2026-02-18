@@ -1,9 +1,12 @@
-"""
+""" General Info
 Author: Will Yurt
 Class: Engineering & Problemsolving
-Project: basic multi-function calculator
+Project: Basic multi-function calculator
+
+For more detail, see READ_ME
 """
-#Functions----------------------------------------------------------------------------------
+
+#--------Functions----------------------------------------------------------------------------------
 
 #Addition
 def add (a, b):
@@ -46,18 +49,8 @@ def long_division (a,b):
     mod_result = mod (a,b)
     return flr_quotient, mod_result
 
+#---------------------Main Loop------------------------------------------------------------------
 
-''' Original Long Division Function
-#Long Division (Floor Division and Modulo)
-def long_division (a, b):
-    Floor_Quotient = a // b
-    Mod = a % b
-    print(Floor_Quotient , "R=",Mod)
-'''
-
-#--------------------------------------------------------------------------------------------
-
-#Main Loop
 quit_statement = ""
 
 print ("Welcome to Will's Calculator 1.0 \n ")
@@ -124,6 +117,8 @@ while quit_statement != "quit":
             b = float(input("input second number: "))
             long_div_answer = long_division (a, b) #returns as a tuple
             print(long_div_answer[0], ", Remainder = ", long_div_answer[1])
+                #Index "0" in the set will be flr_quotient
+                #Index "1" in the set will be mod_result
 
         else: #activates when the user does not use one of the specififed inputs
             print("please input a specified input to select function")
@@ -141,4 +136,4 @@ while quit_statement != "quit":
     print ()
     
     if quit_statement == "quit":
-        print ("Goodbye \n")
+        print ("Goodbye")
