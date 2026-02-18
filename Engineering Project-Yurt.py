@@ -68,12 +68,14 @@ while quit_statement != "quit":
     print("   for Modulo input:           |  %")
     print("   for Long Division input:    |  //% \n")
 
-#inputs a string, tells what the if->elif->lse statement what to do
+
+    #inputs a string, tells what the if->elif->lse statement what to do
     function_selector = input("input selection: ")
 
-#checks the value of the string variable function_selector, main if statement is for addition
-#elif statements are for the rest of the functions
-#else is to let the user know they put a mis-input
+
+    #checks the value of the string variable function_selector, main if statement is for addition
+    #elif statements are for the rest of the functions
+    #else is to let the user know they put a mis-input
     try:
         if function_selector == "+": #addition function selector
             a = float(input("input first number: "))
@@ -135,4 +137,5 @@ while quit_statement != "quit":
     print ()
     
     if quit_statement == "quit":
-        print ("Goodbye")
+        print ("Goodbye \n")
+#end of main loop
