@@ -40,6 +40,13 @@ def floor_div (a,b):
     result = a // b
     return result
 
+#Long Division function
+def long_division (a,b):
+    flr_quotient = floor_div (a,b)
+    mod_result = mod (a,b)
+    return flr_quotient, mod_result
+
+
 ''' Original Long Division Function
 #Long Division (Floor Division and Modulo)
 def long_division (a, b):
@@ -47,12 +54,6 @@ def long_division (a, b):
     Mod = a % b
     print(Floor_Quotient , "R=",Mod)
 '''
-
-def long_division (a,b):
-    flr_quotient = floor_div (a,b)
-    mod_result = int(mod (a,b))
-    return flr_quotient, mod_result
-
 
 #--------------------------------------------------------------------------------------------
 
@@ -108,7 +109,6 @@ while quit_statement != "quit":
             b = float(input("input second number: "))
             result = exponent (a, b)
             
-
         elif function_selector == "//": #floor division function selector
             a = float(input("input first number: "))
             b = float(input("input second number: "))
@@ -122,8 +122,8 @@ while quit_statement != "quit":
         elif function_selector == "//%": #long division function selector
             a = float(input("input first number: "))
             b = float(input("input second number: "))
-            answer = long_division (a, b) #returns as a tuple
-            print(answer[0], ", Remainder = ", answer[1])
+            long_div_answer = long_division (a, b) #returns as a tuple
+            print(long_div_answer[0], ", Remainder = ", long_div_answer[1])
 
         else: #activates when the user does not use one of the specififed inputs
             print("please input a specified input to select function")
@@ -135,6 +135,7 @@ while quit_statement != "quit":
 
     except ZeroDivisionError: #handles if user attemots to divide by zero
         print("Cannot divide by Zero, is UNDEFINED or DOES NOT EXIST")
+        continue
 
     quit_statement = input("to end, input quit; else put continue: ")
     print ()
