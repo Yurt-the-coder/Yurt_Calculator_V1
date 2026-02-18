@@ -75,7 +75,6 @@ while quit_statement != "quit":
 #elif statements are for the rest of the functions
 #else is to let the user know they put a mis-input
     try:
-        
         if function_selector == "+": #addition function selector
             a = float(input("input first number: "))
             b = float(input("input second number: "))
@@ -117,8 +116,8 @@ while quit_statement != "quit":
             b = float(input("input second number: "))
             long_div_answer = long_division (a, b) #returns as a tuple
             print(long_div_answer[0], ", Remainder = ", long_div_answer[1])
-                #Index "0" in the set will be flr_quotient
-                #Index "1" in the set will be mod_result
+                #Index [0] in the tuple will be flr_quotient
+                #Index [1] in the tuple will be mod_result
 
         else: #activates when the user does not use one of the specififed inputs
             print("please input a specified input to select function")
