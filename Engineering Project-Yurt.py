@@ -53,7 +53,7 @@ def long_division (a,b):
 
 quit_statement = ""
 
-print ("Welcome to Will's Calculator 1.0")
+print("Welcome to Will's Calculator 1.0")
 
 while quit_statement != "quit":
 
@@ -144,5 +144,5 @@ while quit_statement != "quit":
     print("")
     
     if quit_statement == "quit":
-        print ("Goodbye \n")
+        print ("Goodbye!")
     #end of main loop
