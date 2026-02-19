@@ -28,3 +28,8 @@ Selected Criteria:
         (b) ZeroDivisionError
             - Handles when the user attempts to divide by zero (0) when the functions that involve division are called.
             - Only activates if the variable "b" = 0 and the one of the division functions is called.
+
+
+The test.py file is a proof of concept for having two separate main loops that can be selected between.
+
+Calc_V1.5.py is the main file for the regex driven PEMDAS calculator
