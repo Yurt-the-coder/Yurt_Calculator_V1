@@ -1,4 +1,7 @@
 #proof for the multi loop idea for V2.0
+#contains the addition functionality from Calc V1.0
+#code will be used to build V2.0 when V1.5 is complete
+#V2.0 will be a combination of V1.0 and V1.5 into two selectable loops and a main menu.
 
 #--------Functions---------------------------------------------------------------------------------
 
@@ -17,8 +20,8 @@ calc_selector_and_quit = ""
 
 print("Welcome to Will's Calculator 1.0")
 while calc_selector_and_quit != "quit":
-    calc_selector_and_quit = input("input V1.5 for 2, inpput '1.0' for original, input 'quit' to quit ")
-    if calc_selector_and_quit == "1.0":
+    calc_selector_and_quit = input("input V1.5 for 2, inpput 'V1.0' for original, input 'quit' to quit ")
+    if calc_selector_and_quit == "V1.0":
         while quit_statement != "quit":
 
             #table showing what the inputs to select each function are
@@ -31,15 +34,7 @@ while calc_selector_and_quit != "quit":
             print("   for Floor Division input:   |  //")
             print("   for Modulo input:           |  %")
             print("   for Long Division input:    |  //% \n")
-
-
-    #inputs a string, tells what the if->elif->lse statement what to do
             function_selector = input("input selection: ")
-
-
-    #checks the value of the string variable function_selector, main if statement is for addition
-    #elif statements are for the rest of the functions
-    #else is to let the user know they put a mis-input
             try:
                 if function_selector == "+": #addition function selector
                     a = float(input("input first number: "))
@@ -63,11 +58,6 @@ while calc_selector_and_quit != "quit":
             #end of loop
     if calc_selector_and_quit == "V1.5":
         while quit_statement_2 != "quit":
-            
-            #placeholder
             print ("v2")
-
-
-
             quit_statement_2 = input("'quit' to return to main ")
             quit_statement_2 = quit_statement_2.lower()
