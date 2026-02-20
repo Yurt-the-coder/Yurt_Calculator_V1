@@ -6,8 +6,6 @@ Will be implemented into Calc_V1.0 as V2.0
 
 
 
-h
-
 
 
 
