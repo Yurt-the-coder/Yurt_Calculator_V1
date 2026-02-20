@@ -21,6 +21,6 @@ uses the re.compile(r'{your search}')              the r in front of the string 
 ^    - Beginning of a string
 $    - End of a string
 
-[]   - Matches characters in brackets
+[]   - Matches the characters put in the (character classes) in brackets
 [^ ] - Matches Characters not in brackets
 

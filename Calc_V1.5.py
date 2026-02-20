@@ -6,11 +6,22 @@ Will be implemented into Calc_V1.0 as V2.0
 
 import re
 
-txt_to_search = "1%2"
+txt_to_search = "34+1*5"
 
-index = re.compile(r'[+\-*/%]')
+operators_search = re.compile(r'[+\-*/%]')
 
-matches = index.finditer(txt_to_search)
+operators = operators_search.finditer(txt_to_search)
 
-for match in matches:
+num_search = re.compile(r'\d')
+
+numbers = num_search.finditer(txt_to_search)
+
+print('\nOperators')
+for match in operators:
     print (match)
+print('')
+
+print ('Numbers')
+for i in numbers:
+    print (i)
+print('')
