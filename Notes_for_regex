@@ -4,7 +4,8 @@ metacharacters
 can search for character class - [+\-*/]
     searches for the arithmetic operators
 
-uses the re.compile(r'{your search}')              the r in front of the string cancels out special characters
+uses the re.compile(r'{your search}')  
+     the r in front of the string cancels out special characters
 
 .    - any character except new line
 
