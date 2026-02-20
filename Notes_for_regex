@@ -1,0 +1,26 @@
+regex pattern searching
+metacharacters
+
+can search for character class - [+\-*/]
+    searches for the arithmetic operators
+
+uses the re.compile(r'{your search}')              the r in front of the string cancels out special characters
+
+.    - any character except new line
+
+\d   - detects digits (0-9)
+\w   - Word Character (a-z, A-Z, 0-9)
+\W   - Not a word character
+\s   -Whitespace, (space, tab, newline)
+\S   - Not whitespace
+
+\b   - word boundary, whitespace or a non alphanumeric character
+            will be useful for searching for operators, +-*/
+\B   - Not a word boundary
+
+^    - Beginning of a string
+$    - End of a string
+
+[]   - Matches characters in brackets
+[^ ] - Matches Characters not in brackets
+

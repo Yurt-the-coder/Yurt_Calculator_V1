@@ -4,20 +4,13 @@ Likely will run off of regex
 Will be implemented into Calc_V1.0 as V2.0
 '''
 
+import re
 
+txt_to_search = "1%2"
 
+index = re.compile(r'[+\-*/%]')
 
+matches = index.finditer(txt_to_search)
 
-
-#Functions
-
-
-
-
-
-
-
-
-quit_statement = ''
-#main loop
-while quit_statement != "quit":
+for match in matches:
+    print (match)
