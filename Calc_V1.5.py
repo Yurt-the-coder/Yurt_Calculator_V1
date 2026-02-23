@@ -10,8 +10,8 @@ import re
 
 #text that I am searching, for testing purposes, will be run off user input later.
 
-#txt_to_search = " 45 + 3"
-txt_to_search = input("input expression ")
+txt_to_search = "45 + 3"
+#txt_to_search = input("input expression ")
 
 
 
