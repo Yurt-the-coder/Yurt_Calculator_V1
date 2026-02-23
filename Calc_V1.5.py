@@ -11,7 +11,7 @@ import re
 #text that I am searching, for testing purposes, will be run off user input later.
 
 #txt_to_search = " 45 + 3"
-txt_to_search = ' ' + input("input expression ")
+txt_to_search = input("input expression ")
 
 
 
@@ -22,13 +22,8 @@ operators = operators_search.finditer(txt_to_search)
 
 
 #Numbers Search________________________________________________
-num_search = re.compile(r' [0-9]+') #searches for single digits
+num_search = re.compile(r'[0-9]+') #searches for single digits
 
-#num_search = re.compile(r'\d\d')          #searches for 2 numbers in a row
-#num_search = re.compile(r'\d\d\d')        #searches for 3 numbers in a row
-#num_search = re.compile(r'\d\d\d\d')      #searches for 4 numbers in a row
-#num_search = re.compile(r'\d\d\d\d\d')    #searches for 5 numbers in a row
-#num_search = re.compile(r'\d\d\d\d\d\d')  #searches for 6 numbers in a row
 
 numbers = num_search.finditer(txt_to_search)
 
