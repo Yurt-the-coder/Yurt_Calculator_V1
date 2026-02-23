@@ -12,7 +12,7 @@ uses the re.compile(r'{your search}')
 \d   - detects digits (0-9)
 \w   - Word Character (a-z, A-Z, 0-9)
 \W   - Not a word character
-\s   -Whitespace, (space, tab, newline)
+\s   - Whitespace, (space, tab, newline)
 \S   - Not whitespace
 
 \b   - word boundary, whitespace or a non alphanumeric character

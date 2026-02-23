@@ -3,17 +3,23 @@ Will be a different function calculator to figure out how to have the user input
 Likely will run off of regex
 Will be implemented into Calc_V1.0 as V2.0
 '''
+
+
 #imports regex
 import re
 
 #text that I am searching, for testing purposes, will be run off user input later.
-txt_to_search = "34567890/60"
 
-operators_search = re.compile(r'[+\-*/%]')
+#txt_to_search = " 45 + 3"
+txt_to_search = ' ' + input("input expression")
+#Operators Search______________________________________________
+operators_search = re.compile(r'[+\-*/%()]')
+
 operators = operators_search.finditer(txt_to_search)
 
 
-num_search = re.compile(r'\d') #searches for single digits
+#Numbers Search________________________________________________
+num_search = re.compile(r' [0-9]+') #searches for single digits
 
 #num_search = re.compile(r'\d\d')          #searches for 2 numbers in a row
 #num_search = re.compile(r'\d\d\d')        #searches for 3 numbers in a row
@@ -24,13 +30,14 @@ num_search = re.compile(r'\d') #searches for single digits
 numbers = num_search.finditer(txt_to_search)
 
 #code below shows that it is working to me, will be removed later
-#need to figure out how to index numbers and operators.
+#need to figure out how to store the index of ops and nums
 print('\nOperators')
 for match in operators:
     print (match)
 print('')
 
 print ('Numbers')
-for i in numbers:
-    print (i)
+for num in numbers:
+    print (num)
 print('')
+
