@@ -20,27 +20,27 @@ def sub (a, b):
 
 #Multiplication
 def mult (a, b):
-    product = a * b
+    product = float(a * b)
     return product
 
 #Division
 def div (a, b):
-    quotient = a / b
+    quotient = float(a / b)
     return quotient
 
 #Exponents
 def exponent (a, b):
-    result = a ** b
+    result = float(a ** b)
     return result
 
 #Modulo
 def mod (a,b):
-    mod_result = a % b
+    mod_result = (a % b)
     return mod_result
 
 #Floor Division
 def floor_div (a,b):
-    flr_result = a // b
+    flr_result = (a // b)
     return flr_result
 
 #Long Division function
@@ -71,7 +71,10 @@ while quit_statement != "quit":
 
     #inputs a string, tells what the if->elif->lse statement what to do
     function_selector = input("input selection: ")
-
+    if function_selector == "quit":
+        break
+    elif function_selector == "break":
+        break
 
     #checks the value of the string variable function_selector, main if statement is for addition
     #elif statements are for the rest of the functions
