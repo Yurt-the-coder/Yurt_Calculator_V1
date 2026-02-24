@@ -1,10 +1,3 @@
-""" General Info
-Author: Will Yurt
-Class: Engineering & Problemsolving
-Project: Basic multi-function calculator
-
-For more detail: see READ_ME
-"""
 import time
 
 #--------Functions---------------------------------------------------------------------------------
@@ -78,6 +71,37 @@ while quit_statement != "quit":
 
     #inputs a string, tells what the if->elif->lse statement what to do
     function_selector = input("input selection: ")
+    
+    #easter eggs
+    if function_selector == 'hello there':
+        print("\nGeneral Kenobi, cough, cough.\nYou are a bold one.\n")
+        time.sleep(3)
+    elif function_selector == 'Hello there':
+        print("\nGeneral Kenobi, cough, cough.\nYou are a bold one.\n")
+        time.sleep(3)
+    elif function_selector == "my new empire":
+        print("\nObi-wan: You have allowed this dark lord to twist your mind, \nuntil now you've become the very thing you swore to destroy.\n")
+        time.sleep(1.5)
+        print("Anakin: Don't lecture me Obi-Wan! I see through the lies of the Jedi.\n")
+        time.sleep(2)
+        print("        I do not fear the dark side as you do.")
+        time.sleep(1)
+        print("\n        I have brought peace freedom, justice and security to my new Empire.\n")
+        time.sleep(3)
+        print("Obi-wan: Your new Empire?\n")
+        time.sleep(1.5)
+        print("Anakin: Don't make me kill you.\n")
+        time.sleep(1.5)
+        print("Obi-wan: Anakin, my allegiance is to the Republic, to democracy.\n")
+        time.sleep(1.5)
+        print("Anakin: if you're not with me, then you're my enemy.\n")
+        time.sleep(1.5)
+        print("Obi-Wan: Only a Sith deals in abslutes. I will do what I must.\n")
+        time.sleep(1)
+        print("Anakin: You will try.\n\n\n")
+        time.sleep(3)
+        print("All credit given to George Lucas for the Star Wars quotes\n\n\n\n")
+    #all credit is to George Lucas for the Star Wars quotes
 
     #checks the value of the string variable function_selector, main if statement is for addition
     #elif statements are for the rest of the functions
