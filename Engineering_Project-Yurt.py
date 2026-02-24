@@ -6,6 +6,7 @@ Project: Basic multi-function calculator
 For more detail: see READ_ME
 """
 import time
+
 #--------Functions---------------------------------------------------------------------------------
 
 #Addition
@@ -74,10 +75,10 @@ while quit_statement != "quit":
     
     #easter eggs
     if function_selector == 'hello there':
-        print("\nGeneral Kenobi, cough, cough.\nYou are a bold one. Kill him!\n")
+        print("\nGeneral Kenobi, cough, cough.\nYou are a bold one.\n")
         time.sleep(3)
     elif function_selector == 'Hello there':
-        print("\nGeneral Kenobi, cough, cough.\nYou are a bold one. Kill him!\n")
+        print("\nGeneral Kenobi, cough, cough.\nYou are a bold one.\n")
         time.sleep(3)
     elif function_selector == "my new empire":
         print("\nObi-wan: You have allowed this dark lord to twist your mind, \nuntil now you've become the very thing you swore to destroy.\n")
@@ -158,7 +159,7 @@ while quit_statement != "quit":
                 #Index [1] in the tuple will be mod_result of the long_division function
         
         #developer tool, breaks the code early
-        if function_selector == "quit":
+        elif function_selector == "quit":
             break
         elif function_selector == "break":
             break
