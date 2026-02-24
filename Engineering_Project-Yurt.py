@@ -5,8 +5,6 @@ Project: Basic multi-function calculator
 
 For more detail: see READ_ME
 """
-import time
-
 #--------Functions---------------------------------------------------------------------------------
 
 #get_nums
@@ -63,7 +61,6 @@ quit_statement = ""
 print("Welcome to Will's Calculator 1.0\n")
 
 while quit_statement != "quit":
-
     #table showing what the inputs to select each function are
     print("Inputs to Select Functions \n")
     print("   for addition input:         |  +")
@@ -74,10 +71,7 @@ while quit_statement != "quit":
     print("   for Floor Division input:   |  //")
     print("   for Modulo input:           |  %")
     print("   for Long Division input:    |  //% \n")
-
-
-    #inputs a string, tells what the if->elif->lse statement what to do
-    function_selector = input("input selection: ")
+    function_selector = input("input selection: ")  #inputs a string, tells what the if->elif->lse statement what to do
 
     #checks the value of the string variable function_selector, main if statement is for addition
     #elif statements are for the rest of the functions
