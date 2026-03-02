@@ -30,4 +30,6 @@ Selected Criteria:
 Purpose of code has not changed. See purpose above
 
 Only 1 major change.
-    Changed the collection of user inputs from being run inside the main loop into a function that returns a tuple with 2 values, the first and second numbers
+    (1) Changed the collection of user inputs from being run inside the main loop into a function that returns a tuple with 2 values, the first and second numbers
+
+No further help needed on main project
