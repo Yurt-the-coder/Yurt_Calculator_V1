@@ -27,6 +27,7 @@ Selected Criteria:
             - Only activates if the variable "b" = 0 and the one of the division functions is called.
 
 
-The test.py file is a proof of concept for having two separate main loops that can be selected between.
+Purpose of code has not changed. See purpose above
 
-Calc_V1.5.py is the main file for the regex driven PEMDAS calculator
+Only 1 major change.
+    Changed the collection of user inputs from being run inside the main loop into a function that returns a tuple with 2 values, the first and second numbers
