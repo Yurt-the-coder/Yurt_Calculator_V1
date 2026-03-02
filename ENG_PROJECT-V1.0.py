@@ -9,8 +9,8 @@ For more detail: see READ_ME
 
 #get_nums
 def get_numbers ():
-    num_1 = float(input("input first number: "))
-    num_2 = float(input("input second number: "))
+    num_1 = float(input("Input first number: "))
+    num_2 = float(input("Input second number: "))
     return num_1, num_2
 
 #Addition
@@ -115,7 +115,7 @@ while quit_statement != "quit":
         elif function_selector == "//%": #long division function selector
             numbers = get_numbers()
             long_div_answer = long_division (numbers[0], numbers[1]) #returns as a tuple
-            print('\n', int(long_div_answer[0]), ", Remainder = ", int(long_div_answer[1]), '\n')
+            print(f'\n{int(long_div_answer[0])} Remainder = {int(long_div_answer[1])} \n')
                 #Index [0] in the tuple will be flr_quotient of the long_division function
                 #Index [1] in the tuple will be mod_result of the long_division function
         
