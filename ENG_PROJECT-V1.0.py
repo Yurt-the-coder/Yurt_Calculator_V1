@@ -5,6 +5,7 @@ Project: Basic multi-function calculator
 
 For more detail: see READ_ME
 """
+
 #--------Functions---------------------------------------------------------------------------------
 
 #get_nums
@@ -54,7 +55,7 @@ def long_division (a,b):
     mod_result = mod (a,b)
     return flr_quotient, mod_result
 
-#---------------------Main Loop--------------------------------------------------------------------
+#---------------------Main_Loop--------------------------------------------------------------------
 
 quit_statement = ""
 
@@ -119,22 +120,30 @@ while quit_statement != "quit":
                 #Index [0] in the tuple will be flr_quotient of the long_division function
                 #Index [1] in the tuple will be mod_result of the long_division function
         
+        #--------------------------------------
         #developer tool, breaks the code early
         elif function_selector == "quit":
             break
         elif function_selector == "break":
             break
+        #--------------------------------------
 
-        else: #activates when the user does not use one of the specififed inputs
-            print("please input a specified input to select function")
+        else: #activates when the user does not use one of the specififed inputs [+, -, *, /, **, %, //%]
+            print("\n--------------------------------------------------")
+            print("ERROR: INVALID CHARACTER(s) INPUT\nplease input a specified input to select function")
+            print("--------------------------------------------------\n")
             continue #returns to the top of the loop
     
-    except ValueError: #handles if the user does not input a number for 'a' or 'b'
-        print ("please input a number, ex, 1 or 54.3, ect.")
+    except ValueError: #activates if the user does not input a number for 'a' or 'b' in the get_nums function
+        print("\n--------------------------------------------------")
+        print ("ERROR: INVALID CHARACTER(s) INPUT\nplease input a number, ex, 1 or 54.3, ect.")
+        print("--------------------------------------------------\n")
         continue
 
-    except ZeroDivisionError: #handles if user attemots to divide by zero
-        print("Cannot divide by Zero, is UNDEFINED or DOES NOT EXIST")
+    except ZeroDivisionError: #handles if user attempts to divide by zero
+        print("\n--------------------------------------------------")
+        print("ERROR: ZERO DIVISION ERROR\nCannot divide by Zero, is UNDEFINED or DOES NOT EXIST")
+        print("--------------------------------------------------\n")
         continue
 
     quit_statement = input("to end, input quit; else put continue: ")
