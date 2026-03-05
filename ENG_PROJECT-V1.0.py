@@ -11,7 +11,9 @@ For more detail: see READ_ME
 #get_nums
 def get_numbers ():
     num_1 = float(input("Input first number: "))
+    print("")
     num_2 = float(input("Input second number: "))
+    print("")
     return num_1, num_2
 
 #Addition
@@ -55,8 +57,8 @@ def long_division (a,b):
     mod_result = mod (a,b)
     return flr_quotient, mod_result
 
-#---------------------Main_Loop--------------------------------------------------------------------
 
+#---------------------Main_Loop--------------------------------------------------------------------
 quit_statement = ""
 
 print("Welcome to Will's Calculator 1.0\n")
@@ -73,7 +75,7 @@ while quit_statement != "quit":
     print("   for Modulo input:           |  %")
     print("   for Long Division input:    |  //% \n")
     function_selector = input("input selection: ")  #inputs a string, tells what the if->elif->lse statement what to do
-
+    print("")
     #checks the value of the string variable function_selector, main if statement is for addition
     #elif statements are for the rest of the functions
     #else is to let the user know they put a mis-input
@@ -81,42 +83,42 @@ while quit_statement != "quit":
         if function_selector == "+": #addition function selector
             numbers = get_numbers()
             sum = add (numbers[0], numbers[1])
-            print('\n', sum, '\n')
+            print('\nSum is:', sum, '\n')
 
         elif function_selector == "-": #subtraction function selector
             numbers = get_numbers()
             difference = sub (numbers[0], numbers[1])
-            print('\n', difference, '\n')
+            print('\nDifference is:', difference, '\n')
 
         elif function_selector == "*": #multiplication function selector
             numbers = get_numbers()
             product = mult (numbers[0], numbers[1])
-            print('\n', product, '\n')
+            print('\nProduct is:', product, '\n')
 
         elif function_selector == "/": #regular division function selector
             numbers = get_numbers()
             quotient = div (numbers[0], numbers[1])
-            print('\n', quotient, '\n')
+            print('\nQuotient is:', quotient, '\n')
 
         elif function_selector == "**": #exponent function selector
             numbers = get_numbers()
             exp_result = exponent (numbers[0], numbers[1])
-            print('\n',exp_result, '\n')
+            print('\nAnswer is:',exp_result, '\n')
             
         elif function_selector == "//": #floor division function selector
             numbers = get_numbers()
             flr_div_result = floor_div (numbers[0], numbers[1])
-            print('\n', flr_div_result, '\n')
+            print('\nAnswer is:', flr_div_result, '\n')
             
         elif function_selector == "%": #modulo function selector
             numbers = get_numbers()
             mod_result = mod (numbers[0], numbers[1])
-            print('\n', mod_result, '\n')
+            print('\nAnswer is:', mod_result, '\n')
 
         elif function_selector == "//%": #long division function selector
             numbers = get_numbers()
             long_div_answer = long_division (numbers[0], numbers[1]) #returns as a tuple
-            print(f'\n{int(long_div_answer[0])} Remainder = {int(long_div_answer[1])} \n')
+            print(f'\nAnswer is: {int(long_div_answer[0])} Remainder = {int(long_div_answer[1])} \n')
                 #Index [0] in the tuple will be flr_quotient of the long_division function
                 #Index [1] in the tuple will be mod_result of the long_division function
         
@@ -133,7 +135,9 @@ while quit_statement != "quit":
             print("ERROR: INVALID CHARACTER(s) INPUT\nplease input a specified input to select function")
             print("--------------------------------------------------\n")
             continue #returns to the top of the loop
-    
+
+    #---------------------------------------------------------------------------------------------------------------
+    #EXCEPTION HANDLING    
     except ValueError: #activates if the user does not input a number for 'a' or 'b' in the get_nums function
         print("\n--------------------------------------------------")
         print ("ERROR: INVALID CHARACTER(s) INPUT\nplease input a number, ex, 1 or 54.3, ect.")
@@ -145,6 +149,8 @@ while quit_statement != "quit":
         print("ERROR: ZERO DIVISION ERROR\nCannot divide by Zero, is UNDEFINED or DOES NOT EXIST")
         print("--------------------------------------------------\n")
         continue
+    #---------------------------------------------------------------------------------------------------------------
+
 
     quit_statement = input("to end, input quit; else put continue: ")
     quit_statement = quit_statement.lower()
@@ -152,4 +158,5 @@ while quit_statement != "quit":
     
     if quit_statement == "quit":
         print ("Goodbye!")
-    #end of main loop
+        break
+#----------------------------------end of main loop---------------------------------------------------------------------------------------------------------------------------
